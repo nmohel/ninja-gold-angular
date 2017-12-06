@@ -1,0 +1,10 @@
+<div class="container">
+  <ul>
+    <li *ngFor="let act of activities">
+      You've 
+      <span *ngIf="act.gold >= 0; else lost">earned {{act.gold}}</span>
+      <ng-template #lost>lost {{act.gold - 1}}</ng-template>
+      at the {{act.building}}
+    </li>
+  </ul>
+</div>

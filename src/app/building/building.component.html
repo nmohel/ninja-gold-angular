@@ -1,0 +1,6 @@
+<div class="container">
+  <h2>{{name}}</h2>
+  <p *ngIf="name !== 'Casino'; else casino">Earns {{min}} - {{max}} Gold</p>
+  <ng-template #casino><p>Earn up {{max}} to or Lose up to {{min * -1}} Gold</p></ng-template>
+  <button (click)="getGold()">{{name}}!</button>
+</div>
